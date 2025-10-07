@@ -1,105 +1,43 @@
-/* Kyra v2.0 – Mobile iOS aesthetic */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-}
-
-body {
-  background: #fff;
-  color: #222;
-  text-align: center;
-  padding: 2rem 1rem 5rem;
-  transition: background 0.4s ease;
-}
-
-header h1 {
-  font-size: 2.2em;
-  font-weight: 700;
-  margin-bottom: 0.3em;
-}
-
-.subtitle {
-  font-size: 1em;
-  color: #888;
-  margin-bottom: 2rem;
-}
-
+/* iOS-style button base */
 .ios-btn {
   display: block;
-  background: #f4f4f4;
-  color: #222;
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 90%;
-  border-radius: 14px;
+  margin: 14px auto; /* 👈 adds spacing between buttons */
+  width: 85%;
+  text-align: center;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 14px 0;
+  border-radius: 16px;
   transition: all 0.25s ease;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  color: #fff;
+  background: #222; /* default for misc */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-.ios-btn:hover, .ios-btn:active {
-  transform: scale(0.98);
+/* Hover/tap effect */
+.ios-btn:active {
+  transform: scale(0.97);
   opacity: 0.85;
 }
 
-/* Accent buttons */
-.ios-btn-special {
-  background: linear-gradient(90deg, #fcb6e9, #f3b3e2);
-  color: #fff;
+/* Section themes */
+.ios-btn-starstuff {
+  background: linear-gradient(145deg, #ffd633, #ffb300);
 }
 
-.yellow-btn {
-  background: #fff5c2;
+.ios-btn-dollblush {
+  background: linear-gradient(145deg, #d57bff, #b84fff);
 }
 
-.purple-btn {
-  background: #ebd4ff;
+.ios-btn-misc {
+  background: linear-gradient(145deg, #2b2b2b, #111);
 }
 
-.black-btn {
-  background: #222;
-  color: #fff;
-}
-
-.back-btn {
-  background: #eee;
-  color: #333;
-}
-
-/* Themed bodies */
-.yellow-theme { background: #fffce6; }
-.purple-theme { background: #faf5ff; }
-.black-theme { background: #000; color: #fff; }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  font-size: 0.8em;
-  color: #999;
-  padding: 0.8rem 0;
-  background: transparent;
-}
-
-.disclaimer {
-  opacity: 0.8;
-}
-
-/* Changelog section */
-.changelog {
-  text-align: left;
-  width: 85%;
-  margin: 0 auto 2rem;
-}
-.changelog h2 {
-  font-size: 1.4em;
-  margin-bottom: 0.5rem;
-}
-.changelog ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+/* Better spacing on mobile */
+@media (max-width: 600px) {
+  .ios-btn {
+    margin: 12px auto;
+    width: 90%;
+  }
 }
